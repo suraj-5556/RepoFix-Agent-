@@ -1,4 +1,4 @@
-﻿[project]
+[project]
 name = "github-issue-agent"
 version = "0.1.0"
 description = "An agentic system to resolve GitHub issues automatically."

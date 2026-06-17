@@ -19,13 +19,13 @@ class read_file_result(BaseModel):
 @tool
 def read_file(
     file_path : Path
-    ) -> search_file_result:
+    ) -> read_file_result:
     """reads file."""
     try:
         with open(file_path, "r") as f:
             content = f.read()
         
-        return search_file_result(file_path=file_path, content=content)
+        return read_file_result(file_path=file_path, content=content)
     except FileNotFoundError:
         return "File not found."
 
@@ -33,7 +33,7 @@ def read_file(
 def search_repository(
     keywords: list[str],
     repo_path: str,
-) -> SearchRepositoryResult:
+) -> search_file_results:
     """
     Search repository using ripgrep and return matches.
     """
@@ -78,6 +78,6 @@ def search_repository(
             except ValueError:
                 continue
 
-    return SearchRepositoryResult(
+    return search_file_results(
         matches=matches
     )

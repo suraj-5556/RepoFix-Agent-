@@ -1,4 +1,4 @@
-﻿[build-system]
+[build-system]
 requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
@@ -9,3 +9,6 @@ description = "An agentic system to resolve GitHub issues automatically."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+
+[tool.setuptools]
+packages = ["app"]
