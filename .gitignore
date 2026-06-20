@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# RepoFix Agent Temporary Folders
+cloned_repos/
+pdf_outputs/
+
